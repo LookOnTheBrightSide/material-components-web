@@ -16,7 +16,16 @@
 
 @import "../../mdc-animation/variables";
 
+// Animating from open -> closed
 $mdc-slidable-drawer-transition-time: .195s;
+
+// Animating from closed -> open
+// TODO(advorak): Should this be .225ms?
+// https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
 $mdc-slidable-drawer-transition-open-time: .33s;
+
+// Animating from open -> closed
 $mdc-slidable-drawer-transition: mdc-animation-enter($name: transform, $duration: $mdc-slidable-drawer-transition-time, $timing-function: $mdc-animation-sharp-curve-timing-function);
+
+// Animating from closed -> open
 $mdc-slidable-drawer-transition-open: mdc-animation-enter($name: transform, $duration: $mdc-slidable-drawer-transition-open-time, $timing-function: $mdc-animation-deceleration-curve-timing-function);

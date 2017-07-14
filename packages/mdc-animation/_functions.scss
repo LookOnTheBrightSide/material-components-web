@@ -20,6 +20,8 @@
   @return $name $duration $delay $timing-function;
 }
 
+// TODO(advorak): Should this default to "Sharp curve"? (Temporarily leaving the screen)
+// https://material.io/guidelines/motion/movement.html#movement-movement-in-out-of-screen-bounds
 @function mdc-animation-exit($name, $duration, $delay: 0ms, $timing-function: $mdc-animation-acceleration-curve-timing-function) {
   @return $name $duration $delay $timing-function;
 }
