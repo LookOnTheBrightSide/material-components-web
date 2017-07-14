@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-$mdc-slidable-drawer-transition-time: .13s;
+@import "../../mdc-animation/variables";
+
+$mdc-slidable-drawer-transition-time: .195s;
 $mdc-slidable-drawer-transition-open-time: .33s;
-$mdc-slidable-drawer-transition: mdc-animation-enter(transform, $mdc-slidable-drawer-transition-time);
-$mdc-slidable-drawer-transition-open: mdc-animation-enter(transform, $mdc-slidable-drawer-transition-open-time);
+$mdc-slidable-drawer-transition: mdc-animation-enter($name: transform, $duration: $mdc-slidable-drawer-transition-time, $timing-function: $mdc-animation-sharp-curve-timing-function);
+$mdc-slidable-drawer-transition-open: mdc-animation-enter($name: transform, $duration: $mdc-slidable-drawer-transition-open-time, $timing-function: $mdc-animation-deceleration-curve-timing-function);
